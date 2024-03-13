@@ -1,88 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Suprema Potestas in VTIIS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-расписание уроков</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .schedule {
+            width: 60%;
+            border-right: 1px solid #ccc;
+            padding-right: 20px;
+        }
+
+        .current-day {
+            width: 40%;
+            padding-left: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #ffd700; /* Цвет выделения текущего урока */
+        }
+    </style>
 </head>
 <body>
-    <img src="assets/flag.png" alt="flag" class="flag">
-    <div class="description">
-      <p>Они решают судьбу группы ВТиИС-131. В их руках власть, не вскружит ли она им голову? Они боролись за нее, следуя за своим лидером, а сейчас они столкнутся друг с другом.</p>
-    </div>
-  <div class="container">
-    <div class="avatar-container">
-      <img src="assets/sobiik.jpg" alt="avatar" class="avatar">
-      <div class="info">
-        <p class="name">агент печка</p>
-        <p class="role">Великая герцогиня-регентша</p>
-      </div>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/sobiiik_" target="_blank">
-          <img src="assets/ico/insta.png" alt="insta" class="icon">
-        </a>
-      </div>
-    </div>
     <div class="container">
-        <div class="avatar-container">
-          <img src="assets/inbliss.aoa.jpeg" alt="avatar" class="avatar">
-          <div class="info">
-            <p class="name">inbliss.aoа</p>
-            <p class="role">Виконт</p>
-          </div>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/inbliss.aoa" target="_blank">
-              <img src="assets/ico/insta.png" alt="insta" class="icon">
-            </a>
-          </div>
+        <div class="schedule">
+            <h2>Расписание уроков ВТиИС-131 | Написал: думаю ясно кто</h2>
+            <table id="fullSchedule">
+                <!-- Здесь вставьте полное расписание со звонками и аудиториями -->
+                <tr>
+                    <th>День недели</th>
+                    <th>Время</th>
+                    <th>Урок</th>
+                    <th>Аудитория</th>
+                </tr>
+                <!-- Добавьте расписание для каждого дня недели -->
+                <tr>
+                    <td>Понедельник</td>
+                    <td>8:00 - 8:45 | 8:50 - 9:35</td>
+                    <td>Офисная техника и ИТ (пара)</td>
+                    <td>110</td>
+                </tr>
+                <tr>
+                    <td>Понедельник</td>
+                    <td>9:40 - 10:25</td>
+                    <td>Английский Язык</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Понедельник</td>
+                    <td>10:30 - 11:15</td>
+                    <td>Основные и периферийные устройства</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>Понедельник</td>
+                    <td>11:35 - 12:20</td>
+                    <td>Биология</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Понедельник</td>
+                    <td>12:25 - 13:10 | 13:20-14:05</td>
+                    <td>Экономика (пара)</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Понедельник</td>
+                    <td>14:10 - 14:55</td>
+                    <td>Физика</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Вторник</td>
+                    <td>8:00 - 8:30</td>
+                    <td>Кураторский час</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Вторник</td>
+                    <td>8:35 - 9:20 | 9:25 - 10:10</td>
+                    <td>Физика (пара)</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Вторник</td>
+                    <td>10:15 - 11:00</td>
+                    <td>Охрана труда</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Вторник</td>
+                    <td>11:20 - 12:05 | 12:10 - 12:55</td>
+                    <td>Офисная техника и ИТ (пара)</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>Вторник</td>
+                    <td>13:05 - 13:50</td>
+                    <td>Zero Coding</td>
+                    <td>101 (библиотека)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>8:00 - 8:45 | 8:50 - 9:35</td>
+                    <td>Офисная техника и ИТ (пара)</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>9:40 - 10:25</td>
+                    <td>Основные и периферийные устройства</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>10:30 - 11:15</td>
+                    <td>Физика</td>
+                    <td>102</td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>11:35 - 12:20</td>
+                    <td>Биология</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>12:25 - 13:10</td>
+                    <td>Основные и периферийные устройства</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Среда</td>
+                    <td>13:20 - 14:05 | 14:10 - 14:55</td>
+                    <td>Английский язык (пара)</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>8:00 - 8:45</td>
+                    <td>Идите ко второму.</td>
+                    <td>дом/автобус</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>8:50 - 9:35</td>
+                    <td>Основы высшей математики</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>9:40 - 10:25</td>
+                    <td>Биология</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>10:30 - 11:15</td>
+                    <td>Английский язык</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>11:35 - 12:20 | 12:25 - 13:10</td>
+                    <td>Основы высшей математики (пара)</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>13:20 - 14:05</td>
+                    <td>Экономика</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Четверг</td>
+                    <td>14:10 - 14:55 | 15:00 - 15:45</td>
+                    <td>Биология (пара)</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Пятница</td>
+                    <td>8:00 - 8:45</td>
+                    <td>Биология</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Пятница</td>
+                    <td>8:50 - 9:35 | 9:40 - 10:25</td>
+                    <td>Охрана труда (пара)</td>
+                    <td>308</td>
+                </tr>
+                <tr>
+                    <td>Пятница</td>
+                    <td>10:30 - 11:15</td>
+                    <td>Физ-ра</td>
+                    <td>Стадион</td>
+                </tr>
+                <tr>
+                    <td>Пятница</td>
+                    <td>11:35 - 12:20 | 12:25 - 13:10</td>
+                    <td>Физика (пара)</td>
+                    <td>308</td>
+                </tr>
+            </table>
         </div>
-        <div class="container">
-            <div class="avatar-container">
-            <img src="assets/oduvanchik.jpg" alt="avatar" class="avatar">
-            <div class="info">
-                <p class="name">__oduvan_chik</p>
-                <p class="role">Графиня</p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/__oduvan_chik/" target="_blank">
-                <img src="assets/ico/insta.png" alt="insta" class="icon">
-                </a>
-            </div>
-            </div> 
-        <div class="container">
-            <div class="avatar-container">
-            <img src="assets/damntae.png" alt="avatar" class="avatar">
-            <div class="info">
-                <p class="name">damntae</p>
-                <p class="role">Персистентный принц</p>
-            </div>
-            <div class="social-icons">
-                <a href="https://discord.com/users/1114946069311266906>" target="_blank">
-                <img src="assets/ico/discord.png" alt="discord" class="icon">
-                </a>
-                <a href="https://instagram.com/sxpientdream" target="_blank">
-                <img src="assets/ico/insta.png" alt="insta" class="icon">
-                </a>
-                <img src="assets/ico/dev.png" alt="developer" class="developer-icon" onclick="showDeveloperInfo()">
-              </div>
-            </div>
-            <div class="container">
-                <div class="avatar-container">
-                <img src="assets/ers.kss.webp" alt="avatar" class="avatar">
-                <div class="info">
-                    <p class="name">ers.kss</p>
-                    <p class="role">Генерал-губернатор</p>
-                </div>
-                <div class="social-icons">
-                    <a href="https://instagram.com/ers.kss" target="_blank">
-                    <img src="assets/ico/insta.png" alt="insta" class="icon">
-                    </a>
-                </div>
-                </div> 
 
+        <div class="current-day">
+            <h2>Расписание на сегодняшний день | [!] Расписание могли изменить, если че дома поменяю</h2>
+            <table id="currentDayTable">
+            </table>
+            <div id="currentTime"></div>
+        </div>
+    </div>
 
-  </div>
-  <script src="script.js"></script>
+    <script>
+        function updateCurrentTime() {
+            const currentTimeElement = document.getElementById('currentTime');
+            const currentDayTable = document.getElementById('currentDayTable');
+            const currentTime = new Date(new Date().toLocaleString("en-US", {timeZone: "Asia/Yekaterinburg"})); // GMT+5
+            const currentDay = currentTime.getDay();
+
+            const hours = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+            
+            currentTimeElement.innerHTML = `Текущее время: ${hours}:${minutes}:${seconds}`;
+
+            currentDayTable.innerHTML = "";
+
+            const rows = fullSchedule.getElementsByTagName('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                if (cells.length < 4) continue;
+
+                const dayOfWeek = cells[0].innerText;
+                const timeRange = cells[1].innerText;
+                const lesson = cells[2].innerText;
+                const room = cells[3].innerText;
+
+                if (dayOfWeek === getDayName(currentDay)) {
+                    const row = currentDayTable.insertRow(-1);
+                    const timeCell = row.insertCell(0);
+                    const lessonCell = row.insertCell(1);
+
+                    timeCell.textContent = timeRange;
+                    lessonCell.textContent = lesson;
+
+                    const [start, end] = timeRange.split(' - ');
+                    const [startHour, startMinute] = start.split(':');
+                    const [endHour, endMinute] = end.split(':');
+
+                    const startTime = new Date();
+                    startTime.setHours(parseInt(startHour), parseInt(startMinute));
+
+                    const endTime = new Date();
+                    endTime.setHours(parseInt(endHour), parseInt(endMinute));
+
+                    if (currentTime >= startTime && currentTime <= endTime) {
+                        row.classList.add('highlight');
+                    }
+                }
+            }
+        }
+
+        function getDayName(dayIndex) {
+            const days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+            return days[dayIndex];
+        }
+
+        setInterval(updateCurrentTime, 1000);
+        updateCurrentTime();
+    </script>
 </body>
 </html>
