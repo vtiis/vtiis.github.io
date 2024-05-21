@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Invictus > Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/inv.svg"  title="">
+</head>
+<body>
+    <div id="loader" class="honeycomb">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="content" style="display: none;">
+    <header>
+        <nav>
+            <ul>
+                <li><img class="logo" src="img/inv.svg" height="35"></li>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="esports.html">eSports</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav> 
+    </header>
+
+    <div class="toptext">
+        <h1 id="INT">Team Invictus</h1>
+        <h2>A CS2 Team from Kazakhstan</h2>
+    </div>
+</div>
+
+    <img id="banner" src="img/banner.png">
+
+    <footer>
+        <p id="footertext">© 2024, Team Invictus Ltd, All rights reserved</p>
+    </footer>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>
