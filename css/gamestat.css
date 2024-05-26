@@ -102,12 +102,14 @@ ul {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease; /* добавил transition только для max-height */
 }
 
 .stats-table th, .stats-table td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    transition: none; /* отключил transition для отдельных ячеек */
 }
 
 .stats-table th {
