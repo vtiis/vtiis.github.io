@@ -82,15 +82,16 @@ ul {
 }
 
 .hidden {
-    opacity: 0; /* начальная прозрачность */
-    max-height: 0; /* начальная высота */
-    overflow: hidden; /* скрыть содержимое, если оно превышает максимальную высоту */
-    transition: opacity 0.3s ease, max-height 0.3s ease; /* добавление анимации */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .stats-table.visible {
-    opacity: 1; /* конечная прозрачность */
-    max-height: 1000px; /* достаточная высота для отображения содержимого */
+    opacity: 1;
+    max-height: 1000px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 
