@@ -82,8 +82,17 @@ ul {
 }
 
 .hidden {
-    display: none;
+    opacity: 0; /* начальная прозрачность */
+    max-height: 0; /* начальная высота */
+    overflow: hidden; /* скрыть содержимое, если оно превышает максимальную высоту */
+    transition: opacity 0.3s ease, max-height 0.3s ease; /* добавление анимации */
 }
+
+.stats-table.visible {
+    opacity: 1; /* конечная прозрачность */
+    max-height: 1000px; /* достаточная высота для отображения содержимого */
+}
+
 
 .stats-table {
     width: 100%;
