@@ -58,12 +58,13 @@ li a:hover {
 
 .stats-table {
     width: 100%;
-    table-layout: fixed; /* Фиксированная ширина ячеек */
+    table-layout: fixed;
     border-collapse: collapse;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .stats-table th, .stats-table td {
@@ -107,14 +108,9 @@ li a:hover {
 }
 
 .hidden {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    display: none;
 }
 
 .stats-table.visible {
-    opacity: 1;
-    max-height: 1000px;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
+    display: table;
 }
