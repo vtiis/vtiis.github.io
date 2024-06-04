@@ -6,8 +6,8 @@
     <title>Invictus > Overview</title>
     <link rel="stylesheet" href="css/gamestat.css">
     <style>
-        .hidden { display: none; }
-        .visible { display: block; }
+        .hidden { opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.3s ease, max-height 0.3s ease; }
+        .visible { opacity: 1; max-height: 1000px; transition: opacity 0.3s ease, max-height 0.3s ease; }
     </style>
 </head>
 <body>
