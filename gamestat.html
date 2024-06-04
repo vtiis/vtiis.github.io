@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invictus > Overview</title>
     <link rel="stylesheet" href="css/gamestat.css">
+    <style>
+        .hidden { display: none; }
+        .visible { display: block; }
+    </style>
 </head>
 <body>
     <header>
@@ -23,9 +27,9 @@
     <div class="container">
         <div class="header">
             <span>29.05.2024 | Game #1: smoothment, ik1gai, Maks, (bench) kkapsamet: 13-7 WIN | BO1 | Competitive | Inferno</span>
-            <a href="#" id="openTabLink" class="button">Open tab</a>
+            <a href="#" class="openTabLink button" data-tab="gameStats1">Open tab</a>
         </div>
-        <div id="gameStats" class="stats-table hidden">>
+        <div id="gameStats1" class="stats-table hidden">
             <table class="stats-table">
                 <thead>
                     <tr>
@@ -119,7 +123,7 @@
                         <td>63</td>
                     </tr>
                     <tr>
-                        <td colspan="5">[name] Колючая крыса</td>
+                        <td colspan="5">[random] Колючая крыса</td>
                         <td>2</td>
                         <td>2</td>
                         <td>19</td>
@@ -127,6 +131,33 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="map-name">Inferno | BO1 | Competitive</div>
+        </div>
+
+        <div class="header">
+            <span>30.05.2024 | Game #2: player1, player2, player3, (bench) player4: 16-14 WIN | BO3 | Dust2</span>
+            <a href="#" class="openTabLink button" data-tab="gameStats2">Open tab</a>
+        </div>
+        <div id="gameStats2" class="stats-table hidden">
+            <!-- Table content for Game 2 -->
+            <table class="stats-table">
+                <!-- Table content as needed -->
+            </table>
+            <div class="map-name">Dust2 | BO3 | Competitive</div>
+        </div>
+    </div>
+
+    <script src="js/gamestat.js"></script>
+</body>
+</html>
+
+    <div class="container">
+        <div class="header">
+            <span>29.05.2024 | Game #1: smoothment, ik1gai, Maks, (bench) kkapsamet: 13-7 WIN | BO1 | Competitive | Inferno</span>
+            <a href="#" id="openTabLink" class="button">Open tab</a>
+        </div>
+        <div id="gameStats" class="stats-table hidden">>
+            
             <div class="map-name">Inferno | BO1 | Competitive</div>
         </div>
     </div>
