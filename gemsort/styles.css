@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e6f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #6a1b9a;
+}
+
+.start-button {
+    background-color: #ab47bc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: #8e24aa;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    color: #6a1b9a;
+}
+
+.lava-lamp {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background: #000;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+@keyframes drop {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(80px); }
+    100% { transform: translateY(0px); }
+}
+
+.bubble, .bubble1, .bubble2, .bubble3 {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, #e64980, #ff8787);
+    border-radius: 50%;
+    animation: drop 5s ease-in-out infinite;
+}
+
+.bubble1 {
+    background: linear-gradient(to bottom, #82c91e, #3bc9db);
+    left: 1px;
+    animation: drop 3s ease-in-out infinite;
+}
+
+.bubble2 {
+    background: linear-gradient(to bottom, #7950f2, #f783ac);
+    left: 30px;
+    animation: drop 4s ease-in-out infinite;
+}
+
+.bubble3 {
+    background: linear-gradient(to bottom, #4481eb, #04befe);
+    left: 20px;
+    animation: drop 6s ease-in-out infinite;
+}
